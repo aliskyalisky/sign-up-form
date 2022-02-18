@@ -1,0 +1,223 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,900;1,300;1,400;1,700&display=swap');
+
+:root {
+    --color-light: #A1A3A0;
+    --color-dark: #231E1C;
+    --color-gold: #B98D69;
+    --color-brown: #543526;
+    --color-blue: #B2C3C7;
+    --color-forestd: #798886;
+    --color-forest: #475754;
+
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    border-radius: 8px;
+    background: white;
+    
+}
+
+.left {
+      width: 45vw;
+     position: relative;
+     overflow: hidden;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+}
+
+.left>img {
+        min-width: 100%;
+        min-height: 100vh;
+        max-height: 200vh;
+        size: cover;
+        filter: blur(5px);
+        transform: scale(1.1);
+}
+
+.logocontainer {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 20vh;
+    overflow: hidden;
+    background: rgba(121, 136, 134, 0.3);
+
+}
+
+.logocontainer img.logo{
+    height: auto;
+    width: 30vw;
+}
+
+.badges img {
+    height: auto;
+    width: 8vw;
+    transition: 0.3s;
+}
+
+.badges img:hover {
+    transform: scale(1.05);
+}
+
+.badges {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: 5vh;
+    overflow: hidden;
+}
+
+
+
+.right {
+    width: 55vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+   
+    padding: 15px;
+    background: linear-gradient(var(--color-forestd), var(--color-forest));
+    
+}
+
+.stars img{
+    height: auto;
+    width: 120px;
+}
+.stars {
+    height: auto;
+    width: auto;
+}
+
+.textcontainer {
+    width: 45vw;
+    text-align: center;
+   
+}
+
+.textcontainer h1 {
+    font-family: 'Lato', sans-serif;
+    font-size: 45px;
+    padding: 20px 0px;
+}
+
+.textcontainer p {
+    font-size: 20px;
+    font-family: 'Lato', sans-serif;
+    color: var(--color-dark);
+}
+
+.form {
+    width: 45vw;
+    
+    align-items: center;
+    font-family: 'Lato', sans-serif;
+
+}
+
+form .formtitle {
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-size: 30px;
+    padding: 20px 0px;
+}
+
+.inputcontainer {
+    width: 45vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+input {
+    margin: 5px 10px 10px 10px;
+    border-radius: 5px;
+    border: none;
+    padding: 5px 10px;
+    -webkit-box-shadow: 0px 4px 15px 1px rgba(0,0,0,0.4); 
+box-shadow: 0px 4px 15px 1px rgba(0,0,0,0.4);
+transition: 0.1s;
+}
+
+.inputbox {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: start;
+    align-items: start;
+    font-family: 'Lato', sans-serif;
+}
+
+.buttons {
+    width: 45vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.buttons button {
+    border: none;
+    border-radius: 5px;
+    background-color: var(--color-forestd);
+    padding: 8px 20px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    -webkit-box-shadow: 0px 4px 15px 1px rgba(0,0,0,0.4); 
+    box-shadow: 0px 4px 15px 1px rgba(0,0,0,0.4);
+    transition: 0.2s;
+}
+
+.buttons button:hover {
+    transform: scale(1.05);
+    background-color: #889997;
+}
+
+.inputbox label {
+    margin-left: 10px;
+    font-size: 12px;
+    transition: 0.1s;
+}
+
+input:focus+label {
+    color: white;
+    text-shadow: 0px 0px 8px rgba(206,206,206,0.28);
+}
+
+textarea:focus, input:focus{
+    outline: 2px inset var(--color-dark);
+    
+}
+
+input#email:invalid {
+    outline: 2px inset red;
+}
+
+input[required]+label:after {
+    content: '*';
+    font-size: 10px;
+    color: var(--color-forestd);
+    margin-left: 5px;
+}
