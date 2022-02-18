@@ -221,3 +221,30 @@ input[required]+label:after {
     color: var(--color-forestd);
     margin-left: 5px;
 }
+
+@media only screen and (max-width: 810px) {
+    input {
+        margin: 5px;
+        padding: 5px;
+        width: 100px;
+    }
+
+    .textcontainer h1 {
+        font-size: 30px;
+    }
+
+    form .formtitle {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        max-height: 200vh;
+    }
+
+    .right, .left {
+        width: 100vw;
+    }
+}
